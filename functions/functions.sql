@@ -1,0 +1,21 @@
+DELIMITER $$
+CREATE FUNCTION hello_world()
+  RETURNS TEXT
+  LANGUAGE SQL
+BEGIN
+  RETURN 'Hello World';
+END;
+$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE FUNCTION hello_world2()
+  RETURNS TEXT
+  LANGUAGE SQL
+BEGIN
+  RETURN 'Hello World 2';
+END;
+$$
+DELIMITER ;
+
+SELECT hello_world() AS shit, hello_world2();
